@@ -27,8 +27,8 @@ export const HeaderSearch = (): React.JSX.Element => {
                     minWidth: '50%',
                     display: 'flex'
                 }}>
-                    <input style={{ width: '100%', height: 65, boxSizing: 'border-box', border: 'none', fontSize: 20, paddingLeft: 10, outline: 'none', fontWeight: 300, fontFamily: 'roboto, sans-serif' }} placeholder='Seach artist, event, venue, location...' />
-                    <button style={{ height: '100%', width: 66, border: 'none', backgroundColor: 'white', fontSize: 30 }}><IoSearch /></button>
+                    <input style={{ width: '100%', height: 65, boxSizing: 'border-box', border: 'none', fontSize: 20, paddingLeft: 10, outline: 'none', fontWeight: 300 }} placeholder='Seach artist, event, venue, location...' />
+                    <button style={{ height: '100%', width: 66, border: 'none', backgroundColor: 'white', fontSize: 34, paddingTop: 10 }}><IoSearch /></button>
                 </form>
             </div>
         </div>

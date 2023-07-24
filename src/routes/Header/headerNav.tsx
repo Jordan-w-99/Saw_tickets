@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const NavLink = ({ hoverTitle, name, linkRoute }: { hoverTitle: string, name: string, linkRoute: string }): React.JSX.Element => {
+    const { pathname } = useLocation()
+    const selected = linkRoute === pathname
+
     const [active, setActive] = useState<boolean>();
 
     return (
@@ -9,7 +12,7 @@ export const NavLink = ({ hoverTitle, name, linkRoute }: { hoverTitle: string, n
             <div
                 title={hoverTitle}
                 style={{
-                    borderBottom: active ? '4px solid #00999A' : '4px solid rgba(0,0,0,0)',
+                    borderBottom: (selected || active) ? '4px solid #00999A' : '4px solid rgba(0,0,0,0)',
                     padding: '18px 0px 8px 0px',
                     marginBottom: 3,
                     fontSize: '14px',
@@ -29,42 +32,42 @@ export const HeaderNav = (): React.JSX.Element => {
     const navItems = [
         {
             name: 'MUSIC',
-            linkRoute: 'music-tickets',
+            linkRoute: '/music-tickets',
             hoverTitle: 'Buy Music, Gig, and Concert Tickets'
         },
         {
             name: 'THEATRE',
-            linkRoute: 'theatre-tickets',
+            linkRoute: '/theatre-tickets',
             hoverTitle: 'TODO'
         },
         {
             name: 'FESTIVALS',
-            linkRoute: 'festival-tickets',
+            linkRoute: '/festival-tickets',
             hoverTitle: 'TODO'
         },
         {
             name: 'DANCE AND CLUBS',
-            linkRoute: 'edm-club-ibiza-tickets-tickets',
+            linkRoute: '/edm-club-ibiza-tickets-tickets',
             hoverTitle: 'TODO'
         },
         {
             name: 'EVENTS',
-            linkRoute: 'event-tickets',
+            linkRoute: '/event-tickets',
             hoverTitle: 'TODO'
         },
         {
             name: 'COMEDY',
-            linkRoute: 'comedy-tickets',
+            linkRoute: '/comedy-tickets',
             hoverTitle: 'TODO'
         },
         {
             name: 'SPORT',
-            linkRoute: 'sport-tickets',
+            linkRoute: '/sport-tickets',
             hoverTitle: 'TODO'
         },
         {
             name: 'ATTRACTIONS',
-            linkRoute: 'attraction-tickets',
+            linkRoute: '/attraction-tickets',
             hoverTitle: 'TODO'
         },
         {

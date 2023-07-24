@@ -1,7 +1,7 @@
 export const TheatreTicketsRoot = () => {
-    return (
-      <>
-        <h1>Implement me</h1>
-      </>
-    );
-  }
+  return (
+    <>
+      <h1>Implement me</h1>
+    </>
+  );
+}

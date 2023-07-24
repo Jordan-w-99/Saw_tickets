@@ -1,6 +1,6 @@
 import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { HeaderRoot } from './routes/Header/headerRoot';
-import { HomeRoot } from './routes/homeRoot';
+import { MusicTicketsRoot } from './routes/musicTickets/musicTicketsRoot';
 
 const App = (): React.JSX.Element => {
 
@@ -10,7 +10,7 @@ const App = (): React.JSX.Element => {
       element:
         <>
           <HeaderRoot />
-          <HomeRoot />
+          <MusicTicketsRoot />
         </>
     },
     {
